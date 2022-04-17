@@ -22,6 +22,12 @@
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
+            "launchBrowser": {
+                "enabled": true
+            },
+            "logging": {
+                "moduleLoad": false
+            },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
             }
