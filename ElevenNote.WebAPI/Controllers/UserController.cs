@@ -18,4 +18,20 @@ namespace ElevenNote.WebAPI.Controllers
             _service = service;
         }
     }
+
+    [HttpPost("Register")]
+    public async Task<IActionResult> RegisterUser([FromBody] UserRegister model)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+        var registerResult = await _service.RegisterUserASync(model);
+        if (registerResult)
+        {
+            return Ok("User was registered.");
+        }
+        return BadRequest("User could not be registered.");
+    }
+
 }
