@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using ElevenNote.Data;
 using ElevenNote.Data.Entities;
 using ElevenNote.Models.User;
 using Microsoft.AspNetCore.Identity;
